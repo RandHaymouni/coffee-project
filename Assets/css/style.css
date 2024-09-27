@@ -39,7 +39,8 @@ button {
     color: white;
 }
 
-button:hover {
+button:hover,
+footer h3 a:hover {
     color: var(--main-color-);
     transform: scale(1.1);
 }
@@ -160,7 +161,8 @@ header {
 
 .about-us .container .about-desc h2,
 .more-products h2,
-.our-flogs h2 {
+.our-flogs h2,
+footer .container h3 {
     Font-size: 32px;
     Font-weight: 700;
     Line-height: 38.4px;
@@ -196,18 +198,31 @@ header {
 
 /* our flogs */
 .our-flogs {
-    height: 30vh;
+    height: 20vh;
 }
 
 .our-flogs .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .our-flogs p,
 .our-flogs h2 {
     text-align: center;
     margin-top: 0px;
+}
+
+/* footr */
+footer {
+    height: 10vh;
+    text-align: center;
+    color: black;
+}
+
+footer .container h3,
+footer h3 a {
+    color: black;
+    transition: 0.5s;
 }
