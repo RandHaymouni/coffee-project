@@ -138,12 +138,14 @@ header {
 }
 
 /* about us */
-.about-us {
+.about-us,
+.more-products{
     height: 80vh;
     flex-wrap: wrap;
 }
 
-.about-us .container{
+.about-us .container,
+.more-products .container {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -155,7 +157,8 @@ header {
     width: 43%;
 }
 
-.about-us .container .about-desc h2 {
+.about-us .container .about-desc h2,
+.more-products h2 {
     Font-size: 32px;
     Font-weight: 700;
     Line-height: 38.4px;
@@ -163,7 +166,8 @@ header {
     margin-bottom: 30px;
 }
 
-.about-us .container .about-desc p {
+.about-us .container .about-desc p,
+.more-products p {
     Font-size: 16px;
     Font-weight: 400;
     Line-height: 24px;
@@ -172,6 +176,17 @@ header {
     width: 93%;
 }
 
-.about-us .container .about-desc button {
+.about-us .container .about-desc button,
+.more-products button {
     margin-top: 35px;
+}
+
+/* more products */
+.more-products .container img {
+    margin-right: 90px;
+    width: 85%;
+}
+
+.more-products p {
+    width: 109%;
 }
