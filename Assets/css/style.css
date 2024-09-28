@@ -150,7 +150,7 @@ header {
 /* about us */
 .about-us,
 .more-products,
-.our-flogs {
+.our-team {
     height: 80vh;
     flex-wrap: wrap;
 }
@@ -158,20 +158,70 @@ header {
 .about-us .container,
 .more-products .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-top: 90px;
     width: 75%;
 }
 
-.about-us .container img {
-    width: 43%;
+.flip-card {
+    background-color: transparent;
+    width: 50%;
+    height: 50%;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 120%;
+    height: 129%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front img {
+    width: 103%;
+    height: 103%;
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(90, 52, 22);
+    text-align: center;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back h1 {
+    margin-bottom: 30px;
+}
+
+.flip-card-back p {
+    margin-bottom: 20px;
 }
 
 .about-us .container .about-desc h2,
 .more-products h2,
-.our-flogs h2,
-footer .container h3 {
+.our-team h2 {
     Font-size: 32px;
     Font-weight: 700;
     Line-height: 38.4px;
@@ -181,13 +231,13 @@ footer .container h3 {
 
 .about-us .container .about-desc p,
 .more-products p,
-.our-flogs p {
+.our-team p {
     Font-size: 16px;
     Font-weight: 400;
     Line-height: 24px;
     color: black;
     margin-bottom: 20px;
-    width: 93%;
+    width: 80%;
 }
 
 .about-us .container .about-desc button,
@@ -196,45 +246,105 @@ footer .container h3 {
 }
 
 /* more products */
-.more-products .container img {
-    margin-right: 90px;
-    width: 85%;
-    padding-top: 120px;
+.more-products .flip-card {
+    width: 60%;
+    margin-right: 30px;
+
+}
+
+.more-products .more-products-desc {
+    padding-left: 150px;
 }
 
 .more-products p {
-    width: 109%;
+    width: 105%;
 }
 
-/* our flogs */
-.our-flogs {
-    height: 20vh;
+.more-products .flip-card-back p {
+    color: white;
 }
 
-.our-flogs .container {
-    padding-top: 250px;
+/* our team */
+.our-team {
+    height: 65vh;
+}
+
+.our-team .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 107px;
 }
 
-.our-flogs p,
-.our-flogs h2 {
+.our-team p,
+.our-team h2 {
     text-align: center;
     margin-top: 0px;
 }
 
+.our-team .pepoleMini {
+    width: 32%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-team .pepoleMini img {
+    width: 60%;
+    border: 0.3rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+}
+
+.our-team .pepoleMini h3 {
+    Font-size: 22.416px;
+    Font-weight: 700;
+    Line-height: 26.8992px;
+    padding-top: 20px;
+}
+
+.our-team .pepoleMini p {
+    Font-size: 16px;
+    Font-weight: 400;
+    Line-height: 28px;
+    padding-top: 5px;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.our-team .pepoleMini .icons i {
+    Font-size: 20px;
+    Font-weight: 400;
+    Line-height: 28px;
+    color: white;
+    background-color: #212529;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 100%;
+    margin: 5px;
+    transition: 0.5s;
+
+}
+
+.our-team .pepoleMini .icons i:hover {
+    background-color: #686868;
+    cursor: pointer;
+}
+
+*/
+
 /* footr */
 footer {
     height: 10vh;
-    padding: 280px;
     text-align: center;
     color: black;
 }
 
-footer .container h3,
-footer h3 a {
-    color: black;
-    transition: 0.5s;
+footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
